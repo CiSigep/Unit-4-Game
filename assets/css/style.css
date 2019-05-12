@@ -1,0 +1,10 @@
+.crystal-container {
+    width: 400px;
+}
+
+.crystal {
+    width: 75px;
+    height: 75px;
+    background: black;
+    display: inline-block;
+}
