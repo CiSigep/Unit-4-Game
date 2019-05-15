@@ -1,10 +1,9 @@
-.crystal-container {
-    width: 400px;
+body {
+    background: url('../images/backgrounds-blank-blue-953214.jpg');
 }
 
+
 .crystal {
-    width: 75px;
-    height: 75px;
-    background: black;
-    display: inline-block;
+    cursor: pointer;
+    max-width: 150px;
 }

@@ -1,51 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Crystal Collector</title>
-        <link rel="stylesheet" type="text/CSS" href="assets/css/reset.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/CSS" href="assets/css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
-    </head>
-    <body>
-        <div class="main-container">
-            <h1>Crystal Collector!</h1>
-            <section id="instructionsSection">
+<html lang="en" class="h-100">
+
+<head>
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/CSS" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/CSS" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+
+<body class="p-0 h-100">
+    <div class="main-container container bg-light h-100">
+        <div class="row">
+            <div class="col-12 p-0">
+                <h1 class="text-center my-0 py-2 bg-dark text-light">Crystal Collector</h1>
+            </div>
+        </div>
+        <div class="row pt-2 bg-light text-dark">
+            <section id="instructionsSection" class="col-12">
                 <p>
                     You will be given a random number at the start of the game.
                 </p>
                 <p>
-                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your total score.
                 </p>
                 <p>
-                    You win the game by matching your total score to to a random number, you lose the game if your total score goes above the random number.
+                    You win the game by matching your total score to to a random number, you lose the game if your total
+                    score goes above the random number.
                 </p>
-                <p>
+                <p class="mb-1">
                     Each time the game starts, the game will change the values of each crystal.
                 </p>
             </section>
-            <section id="scoring">
-                <div id="scoreToMatch">
-                    X
-                </div>
-                <div id="gameResults">
-                    <div id="wins">Wins: <span>0</span></div>
-                    <div id="losses">Losses: <span>0</span></div>
-                </div>
-            </section>
-            <section class="crystal-container">
-                <div id="crystal-0" class="crystal" data-which="0"></div>
-                <div id="crystal-1" class="crystal" data-which="1"></div>
-                <div id="crystal-2" class="crystal" data-which="2"></div>
-                <div id="crystal-3" class="crystal" data-which="3"></div>
-            </section>
-            <section id="playerScore">
-                <span>Your total score is:</span>
-                <div id="totalScore">
-                    0
-                </div>
-            </section>
         </div>
-    </body>
+        <div class="row bg-light py-2">
+            <div class="col-12">
+                <hr class="w-100 m-0">
+            </div>
+        </div>
+        <section id="scoring" class="row pb-0 bg-light text-dark">
+            <div class="col-6">
+                <h3>Score to Match: <div id="scoreToMatch" class="text-center"></div></h3>
+            </div>
+            <div id="gameResults" class="col-6">
+                <h3 id="wins">Wins: <span class=>0</span></h3>
+                <hr class="w-100 my-2">
+                <h3 id="losses">Losses: <span>0</span></h3>
+            </div>
+        </section>
+        <div class="row bg-light py-2">
+            <div class="col-12">
+                <hr class="w-100 m-0">
+            </div>
+        </div>
+        <section class="crystal-container row py-2 bg-light">
+            <div id="crystal-0" class="col-3">
+                <img src="assets/images/blue.png" alt="Blue Crystal" class="img-fluid img-thumbnail crystal"
+                    data-which="0">
+            </div>
+            <div id="crystal-1" class="col-3">
+                <img src="assets/images/red.png" alt="Red Crystal" class="img-fluid img-thumbnail crystal"
+                    data-which="1">
+            </div>
+            <div id="crystal-2" class="col-3">
+                <img src="assets/images/violet.png" alt="Violet Crystal" class="img-fluid img-thumbnail crystal"
+                    data-which="2">
+            </div>
+            <div id="crystal-3" class="col-3">
+                <img src="assets/images/Orange.png" alt="Orange Crystal" class="img-fluid img-thumbnail crystal"
+                    data-which="3">
+            </div>
+        </section>
+        <div class="row bg-light py-2">
+            <div class="col-12">
+                <hr class="w-100 m-0">
+            </div>
+        </div>
+        <section id="playerScore" class="row bg-light text-dark pb-3">
+            <div class="col-12">
+                <h3 class="mb-0">
+                    <span>Your total score is:</span>
+                    <div id="totalScore" class="text-center">
+                        0
+                    </div>
+                </h3>
+            </div>
+        </section>
+        <div class="row bg-light py-2">
+            <div class="col-12">
+                <hr class="w-100 m-0">
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

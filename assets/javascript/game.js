@@ -96,7 +96,7 @@ $(function(){
         // We can use a recursive algorithm to find a solution
         // If no solution is found, the game shouldn't be winnable
         isValidRec(rem, arr, possible = { isIt: false }, start = 0){
-            // We've gone past our value or a solution has already been found, return,
+            // We've gone past our value or a solution has already been found, return.
             if(rem < 0 || possible.isIt)
               return possible;
             // Solution found, flip possible's value to true
@@ -107,6 +107,7 @@ $(function(){
             }
             
             // Still looking, take more from the value we're looking at.
+            // Remember where we've been, so we don't retry a potential solution.
             for(var i = start; i < arr.length; i++)
               this.isValidRec(rem - arr[i], arr, possible, i);
           
