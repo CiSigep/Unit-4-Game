@@ -2,6 +2,10 @@ body {
     background: url('../images/backgrounds-blank-blue-953214.jpg');
 }
 
+p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 
 .crystal {
     cursor: pointer;
